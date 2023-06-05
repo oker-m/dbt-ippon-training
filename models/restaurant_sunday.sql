@@ -1,1 +1,1 @@
-select * from {{ref("restaurants")}} where open_on_sundays = True
+select * from {{ source('name_source_scenario2', 'restaurants') }} where open_on_sunday = 'true'
