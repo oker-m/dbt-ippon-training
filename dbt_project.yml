@@ -25,6 +25,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 
+vars:
+  nb_restaurants_to_show: 5
+
+  payment_methods: ['cheque', 'card']
+
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
