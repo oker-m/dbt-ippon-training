@@ -7,4 +7,22 @@ sources:
 
     tables:
       - name: restaurants
+        columns:
+        - name: open_on_sunday
+          tests:
+            - accepted_values:
+                values: ["true", "false"]
+        - name: address
+          tests:
+            - not_null  
       - name: orders
+        columns:
+        - name: identifier
+          tests:
+          - unique
+        - name: restaurant_identifier
+          tests:
+          - relationships:
+              to: ref('base_restaurants')
+              field: identifier
+          
