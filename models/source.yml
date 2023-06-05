@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: name_source_scenario2
+    database: DB_DBT_MOKER_DEV
+    schema: source
+
+    tables:
+      - name: restaurants
+      - name: orders
