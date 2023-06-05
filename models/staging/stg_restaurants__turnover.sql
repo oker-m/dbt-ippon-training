@@ -1,4 +1,4 @@
-select r.name, r.address,coalesce(sum(o.amount), 0) as turnover
+select r.name as name, r.address,coalesce(sum(o.amount), 0) as turnover
 from
     {{ ref("base_restaurants") }} as r
 left join

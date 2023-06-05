@@ -1,1 +1,1 @@
-select * from {{source("name_source_scenario2", "orders")}}
+select distinct * from {{source("name_source_scenario2", "orders")}}
