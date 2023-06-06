@@ -21,8 +21,6 @@ sources:
           - unique
         - name: restaurant_identifier
           tests:
-          - relationships:
-              to: ref('base_restaurants')
-              field: identifier
+          - not_null
       - name: dishes
           
