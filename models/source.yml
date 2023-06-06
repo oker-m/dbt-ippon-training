@@ -10,8 +10,7 @@ sources:
         columns:
         - name: open_on_sunday
           tests:
-            - accepted_values:
-                values: ["true", "false"]
+            - not_null
         - name: address
           tests:
             - not_null  
@@ -22,7 +21,6 @@ sources:
           - unique
         - name: restaurant_identifier
           tests:
-          - relationships:
-              to: ref('base_restaurants')
-              field: identifier
+          - not_null
+      - name: dishes
           

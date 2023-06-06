@@ -1,1 +1,1 @@
-select * from {{source("name_source_scenario2", "restaurants")}}
+select * from {{ mockable_source("name_source_scenario2", "restaurants", "sample_restaurants") }}
