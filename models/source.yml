@@ -2,7 +2,11 @@ version: 2
 
 sources:
   - name: name_source_scenario2
-    database: DB_DBT_MOKER_DEV
+    database: |
+      {%- if target.name.lower() == "dev" -%} DB_DBT_MOKER_DEV
+      {%- if target.name.lower() == "prod" -%} DB_DBT_MOKER_PROD
+      {%- else -%} DB_DBT_MOKER_DEV
+      {%- endif -%}
     schema: source
 
     tables:
